@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-white {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .btn-white:hover {
+    background-color: #f3f4f6 !important;
+  }
+}

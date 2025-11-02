@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }} - {{ site.description | strip_html | strip_newlines | truncate: 160 }}</title>
+  <meta name="description" content="{{ site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-brand-dark font-sans antialiased">
+
+  <!-- Floating Navbar (hidden by default, shows on scroll) -->
+  <div class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 lg:px-8 pointer-events-none">
+    <nav id="floating-nav" class="w-full max-w-[640px] mt-4 transform -translate-y-32 transition-transform duration-300 pointer-events-auto">
+      <div class="bg-brand-gray/80 backdrop-blur-xl border border-gray-800 rounded-2xl shadow-lg px-6">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-3">
+            <img src="{{ '/assets/img/app-icon.png' | relative_url }}" alt="Copy Vault" class="w-10 h-10">
+            <span class="text-xl font-bold text-white">Copy Vault</span>
+          </div>
+          <a href="#download" class="btn-white inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-lg transition-colors duration-200">
+            Download
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-brand-dark pt-20 pb-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <!-- App Icon -->
+        <div class="flex justify-center mb-8">
+          <img src="{{ '/assets/img/app-icon.png' | relative_url }}" alt="Copy Vault App Icon" class="w-32 h-32 transform hover:scale-105 transition-transform duration-300">
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+          Your clipboard,<br>
+          <span class="text-gradient bg-gradient-to-r from-[#e4f6f0] via-[#9dcfca] via-[#6b95ac] to-[#45657d]">supercharged</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl sm:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+          The powerful clipboard manager for macOS. Never lose what you copy with instant access to your complete clipboard history.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <a href="#download" class="btn-white inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            Download for Mac
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </a>
+          <a href="#features" class="inline-flex items-center px-8 py-4 bg-gray-800 text-white text-lg font-semibold rounded-xl hover:bg-gray-700 transition-colors duration-200">
+            Learn more
+          </a>
+        </div>
+
+        <!-- App Screenshot -->
+        <div class="relative max-w-5xl mx-auto">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
+            <img src="{{ '/assets/img/app-screenshot.png' | relative_url }}" alt="Copy Vault Screenshot" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+          Everything you need
+        </h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Copy Vault is designed to make your clipboard work harder for you
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Feature 1: Clipboard History -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-900/30 rounded-2xl mb-6">
+            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Unlimited History</h3>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Access everything you've ever copied. Search through your complete clipboard history with lightning-fast search.
+          </p>
+        </div>
+
+        <!-- Feature 2: Quick Access -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-900/30 rounded-2xl mb-6">
+            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Lightning Fast</h3>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Invoke Copy Vault instantly with a keyboard shortcut. Find what you need in milliseconds, not minutes.
+          </p>
+        </div>
+
+        <!-- Feature 3: iCloud Sync -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-900/30 rounded-2xl mb-6">
+            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Seamless Sync</h3>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Your clipboard history syncs automatically across all your Macs with iCloud. Copy on one device, paste on another.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="py-24 bg-gradient-to-b from-brand-gray to-brand-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+        Ready to supercharge your clipboard?
+      </h2>
+      <p class="text-xl text-gray-400 mb-12">
+        Download Copy Vault for macOS today
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://apps.apple.com/app/copyvault" class="inline-block transform hover:scale-105 transition-transform duration-200">
+          <img src="{{ '/assets/img/app-store-badge.svg' | relative_url }}" alt="Download on the Mac App Store" class="h-14">
+        </a>
+      </div>
+
+      <p class="mt-8 text-gray-500">
+        Requires macOS 13 or later
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center text-gray-400">
+        <p>&copy; {{ 'now' | date: "%Y" }} Copy Vault. All rights reserved.</p>
+        <div class="mt-4 space-x-6">
+          <a href="/privacy" class="hover:text-brand-blue transition-colors">Privacy Policy</a>
+          <a href="/terms" class="hover:text-brand-blue transition-colors">Terms of Service</a>
+          <a href="mailto:{{ site.email }}" class="hover:text-brand-blue transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Show/hide floating navbar on scroll
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('floating-nav');
+      const heroSection = document.querySelector('section');
+      const heroCTA = document.querySelector('section a[href="#download"]');
+
+      if (heroCTA) {
+        const ctaBottom = heroCTA.getBoundingClientRect().bottom;
+
+        // Show navbar when the CTA button scrolls past the top of the viewport
+        if (ctaBottom < 0) {
+          nav.classList.remove('-translate-y-32');
+          nav.classList.add('translate-y-0');
+        } else {
+          nav.classList.remove('translate-y-0');
+          nav.classList.add('-translate-y-32');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -7,7 +7,16 @@ module.exports = {
     './*.{html,md,markdown}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'brand-blue': '#1c95ff',
+        'brand-dark': '#101010',
+        'brand-gray': '#1a1a1a',
+      },
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
